@@ -1,20 +1,20 @@
 (function() {
     function config($stateProvider, $locationProvider) {
-        
+
         $locationProvider
             .html5Mode({
                 enabled: true,
                 requireBase: false
             });
-        
+
         $stateProvider
-            .state('main', {
+            .state('room', {
                 url: '/',
                 controller: 'RoomCtrl as room',
-                templateUrl: '../index.html'
+                templateUrl: 'templates/room.html'
             });
     }
-    
+
     angular
         .module('blocChat', ['ui.router', 'firebase'])
         .config(config);

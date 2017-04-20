@@ -1,23 +1,15 @@
 {
-  "name": "bloc-frontend-project-starter",
-  "version": "0.0.3",
-  "description": "Starter project for the Bloc Frontend Web Development",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/bloc/bloc-frontend-project-starter"
-  },
-  "main": "server.js",
+  "name": "bloc-chat",
+  "version": "1.0.0",
+  "description": "bloc chat project",
+  "main": "index.js",
   "scripts": {
-    "start": "node server.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Bloc Inc",
-  "license": "ISC",
-  "dependencies": {
-    "hapi": "~7.5.0",
-    "path": "^0.4.9" 
-  },
-  "devDependencies": {
-    "connect-modrewrite": "^0.7.9",
-    "es5-shim": "^4.0.1"
-  }
+  "keywords": [
+    "bloc",
+    "chat"
+  ],
+  "author": "Bloc",
+  "license": "UNLICENSED"
 }
