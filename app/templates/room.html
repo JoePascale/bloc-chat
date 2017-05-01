@@ -1,4 +1,10 @@
-Room
-<div ng-repeat="rooms in room.rooms">
-{{ rooms.$value }}
+<div>
+  <div ng-controller="ModalCtrl as modal">
+    <button class="new-room" ng-click="modal.open()">
+      <h4>New Room</h4>
+    </button>
+  </div>
+  <div class="room-list" ng-repeat="rooms in room.rooms">
+    {{ rooms.$value }}
+  </div>
 </div>
