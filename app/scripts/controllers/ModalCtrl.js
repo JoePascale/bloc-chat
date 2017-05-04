@@ -1,23 +1,21 @@
 (function() {
-    function ModalCtrl($uibModal, $uibModalInstance, Room) {
+    function ModalCtrl($uibModal, Room) {
 
       //opens the modal instance, creates an object with various properties
       this.open = function() {
         var modalInstance = $uibModal.open({
           animation: this.animationsEnabled,
           templateUrl: './templates/modal.html',
+          controller: 'ModalInstanceCtrl',
+          controllerAs: 'modal',
         });
-      }
 
-      //submit form data to modal
-      this.submit = function () {
-        Room.addRoom();
-        $uibModalInstance.close();
-      }
+        modalInstance.result.then(function(input){
+          console.log(input);
+          modalInstance.addRoom = input;
+        })
+        //pass to Room factory
 
-      //cancel the modal after it is open by pressing modal button
-      this.close = function () {
-        $uibModalInstance.dismiss();
       }
 
 

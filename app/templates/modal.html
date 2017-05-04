@@ -1,9 +1,9 @@
-<div class="modal" ng-controller="ModalCtrl as modal">
+<div class="modal">
   <div class="modal-header">
     <h3>Create New Room</h3>
     </br>
     <p>Enter a room name:</p>
-    <input type="text" name="room"><br>
+    <input type="text" name="room" ng-model="modal.input"><br>
   </div>
   <div class="modal-body">
     <div class="entry-box">
@@ -13,7 +13,7 @@
     <button class="cancel-box" ng-click="modal.close()">
       Cancel
     </button>
-    <button class="create-room-box" ng-submit="modal.submit()">
+    <button class="create-room-box" ng-click="modal.submit()">
       Create Room
     </button>
   </div>
