@@ -10,11 +10,9 @@
           controllerAs: 'modal',
         });
 
-        modalInstance.result.then(function(input){
-          console.log(input);
-          modalInstance.addRoom = input;
+        modalInstance.result.then(function(room){
+          Room.add(room);
         })
-        //pass to Room factory
 
       }
 

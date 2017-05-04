@@ -3,7 +3,7 @@
 
       //submit form data to modal
       this.submit = function () {
-        $uibModalInstance.close(this.input);
+        $uibModalInstance.close(this.room);
       }
 
       //cancel the modal after it is open by pressing modal button
