@@ -1,1 +1,25 @@
 .nav, .pagination, .carousel, .panel-title a { cursor: pointer; }
+
+.body {
+}
+
+.room-container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: lightblue;
+  width: 1050px;
+  height: 1000px;
+}
+
+.room-list {
+  font-family: sans-serif;
+  font-style: italic;
+  font-size: 24px;
+  border: 1px solid;
+  border-radius: 20px;
+}
+
+h2 {
+  font-family: "Times New Roman";
+}

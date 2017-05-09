@@ -1,10 +1,20 @@
-<div>
+<head>
+</head>
+<body>
   <div ng-controller="ModalCtrl as modal">
     <button class="new-room" ng-click="modal.open()">
       <h4>New Room</h4>
     </button>
+  </br>
+  </br>
   </div>
   <div class="room-list" ng-repeat="room in room.rooms">
     {{ room.name }}
   </div>
-</div>
+  <div class="room-container">
+    <table>
+      <tr>
+      </tr>
+    </table>
+  </div>
+</body>
