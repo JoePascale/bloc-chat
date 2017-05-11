@@ -5,15 +5,25 @@
     <button class="new-room" ng-click="modal.open()">
       <h4>New Room</h4>
     </button>
-  </br>
-  </br>
   </div>
-  <div class="room-list" ng-repeat="room in room.rooms">
-    {{ room.name }}
+  </br>
+  </br>
+  <div class="room-list" ng-repeat="roomObj in room.rooms">
+    <p ng-click="room.activeRoom(roomObj)">
+      {{ roomObj.name }}
+    </p>
   </div>
   <div class="room-container">
+    <div class="room-title">
+      <h2>
+        {{ room.currentRoomName }}
+      </h2>
+    <div class="message-display">
     <table>
-      <tr>
+      <tr ng-repeat="message in message">
+        <td> {{ message.getByRoomId.username }} </td>
+        <td> {{ message.getByRoomId.content }} </td>
+        <td> {{ message.getByRoomId.sentAt }} </td>
       </tr>
     </table>
   </div>
