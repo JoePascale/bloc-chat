@@ -7,10 +7,13 @@
     //set up query to match and display messages with same roomId as the activeRoom selected
     Message.getByRoomId = function(roomId) {
       // Filter the messages by their room ID.
+      var currentMessages;
+
       ref.orderByChild('roomId').equalTo(roomId).on('value', function(snapshot) {
-          return snapshot.val();
+          currentMessages = snapshot.val();
       });
 
+      return currentMessages;
     };
 
     return Message;

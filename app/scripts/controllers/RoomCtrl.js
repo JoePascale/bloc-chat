@@ -9,7 +9,6 @@
           this.roomMessages = Message.getByRoomId(roomObj.$id);
         };
 
-
     }
 
     angular

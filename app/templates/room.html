@@ -20,10 +20,10 @@
       </h2>
     <div class="message-display">
     <table>
-      <tr ng-repeat="roomMessages in room.activeRoom">
-        <td> {{ roomMessages.username }} </td>
-        <td> {{ roomMessages.content }} </td>
-        <td> {{ roomMessages.sentAt }} </td>
+      <tr ng-repeat="roomMessage in room.roomMessages track by $index">
+        <td> {{ roomMessage.username }} </td>
+        <td> {{ roomMessage.content }} </td>
+        <td> {{ roomMessage.sentAt }} </td>
       </tr>
     </table>
   </div>
