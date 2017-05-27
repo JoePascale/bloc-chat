@@ -16,6 +16,20 @@
       return currentMessages;
     };
 
+    //takes a message object as an argument and submits it to your Firebase server
+    Message.send = function(content, roomId) {
+        // Send method logic
+        //debugger;
+
+        var newMessage = {};
+        newMessage.content = content;
+        newMessage.roomId = roomId;
+        newMessage.sentAt = new Date();
+        //newMessage.username = $cookies.get('blocChatCurrentUser');
+        console.log(newMessage);
+        //messages.$add(newMessage);
+    }
+
     return Message;
 
   }

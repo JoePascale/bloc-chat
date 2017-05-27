@@ -9,6 +9,8 @@
           this.roomMessages = Message.getByRoomId(roomObj.$id);
         };
 
+        this.createMessage = Message.send;
+
     }
 
     angular

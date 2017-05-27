@@ -18,13 +18,24 @@
       <h2>
         {{ room.currentRoomName }}
       </h2>
+    </div>
+    </br>
     <div class="message-display">
-    <table>
+    <table class="message-table">
       <tr ng-repeat="roomMessage in room.roomMessages track by $index">
         <td> {{ roomMessage.username }} </td>
+      </br>
         <td> {{ roomMessage.content }} </td>
+      </br>
         <td> {{ roomMessage.sentAt }} </td>
       </tr>
     </table>
+    </div>
+    <div class="message-send">
+        <input type="text" placeholder="Type Your Message Here..." class="message-content" ng-model="room.message">
+        <button class="send" ng-click="room.createMessage(room.message, {{$id.room.activeRoom(roomObj)}})">
+          <h4>Send</h4>
+        </button>
+    </div>
   </div>
 </body>

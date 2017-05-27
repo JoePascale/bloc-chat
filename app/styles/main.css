@@ -3,21 +3,22 @@
 .body {
 }
 
-.room-container {
-  position: fixed;
-  top: 0;
-  right: 0;
-  background-color: lightblue;
-  width: 1050px;
-  height: 1000px;
-}
-
 .room-list {
   font-family: sans-serif;
   font-style: italic;
   font-size: 24px;
   border: 1px solid;
   border-radius: 20px;
+  width: 100px;
+}
+
+.room-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: lightblue;
+  width: 1150px;
+  height: 730px;
 }
 
 .room-title {
@@ -32,4 +33,23 @@ h2 {
 
 .user-modal {
   text-align: center
+}
+
+td {
+  padding: 10px;
+}
+
+.message-table {
+  width: 100%;
+  font-size: 20px;
+}
+
+.message-send {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.message-content {
+  width: 90%;
 }
