@@ -33,7 +33,7 @@
     </div>
     <div class="message-send">
         <input type="text" placeholder="Type Your Message Here..." class="message-content" ng-model="room.message">
-        <button class="send" ng-click="room.createMessage(room.message, {{$id.room.activeRoom(roomObj)}})">
+        <button class="send" ng-click="room.createMessage(room.message, room.activeRoom.roomId)">
           <h4>Send</h4>
         </button>
     </div>
