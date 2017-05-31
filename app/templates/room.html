@@ -9,7 +9,7 @@
   </br>
   </br>
   <div class="room-list" ng-repeat="roomObj in room.rooms">
-    <p ng-click="room.activeRoom(roomObj)">
+    <p ng-click="room.activeRoom(roomObj); room.thereIsAnActiveRoom = true">
       {{ roomObj.name }}
     </p>
   </div>
@@ -31,11 +31,11 @@
       </tr>
     </table>
     </div>
-    <div class="message-send">
+    <form class="message-send" ng-show="room.thereIsAnActiveRoom">
         <input type="text" placeholder="Type Your Message Here..." class="message-content" ng-model="room.message">
-        <button class="send" ng-click="room.createMessage(room.message, room.activeRoom.roomId)">
+        <button class="send" ng-click="room.createMessage(room.message, room.roomId); room.message = null">
           <h4>Send</h4>
         </button>
-    </div>
+    </form>
   </div>
 </body>
