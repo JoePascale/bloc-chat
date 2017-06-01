@@ -9,9 +9,7 @@
       // Filter the messages by their room ID.
       var currentMessages;
 
-      ref.orderByChild('roomId').equalTo(roomId).on('value', function(snapshot) {
-          currentMessages = snapshot.val();
-      });
+      currentMessages = $firebaseArray(ref.orderByChild("roomId").equalTo(roomId));
 
       return currentMessages;
     };
@@ -24,10 +22,13 @@
         newMessage.roomId = roomId;
         newMessage.sentAt = Date();
         newMessage.username = $cookies.get('username');
-        //console.log(newMessage);
-        messages.$add(newMessage);
-        //need something here to re-render?
-        Message.getByRoomId(roomId);
+        messages.$add(newMessage)/*.then(function(ref) {
+          debugger;
+          var id = ref.key;
+          console.log("added record with id " + id);
+          messages.$indexFor(id);
+        });*/
+
     }
 
     return Message;
